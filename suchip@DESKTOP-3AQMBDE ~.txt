@@ -1,0 +1,23 @@
+Windows PowerShell
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+Install the latest PowerShell for new features and improvements! https://aka.ms/PSWindows
+
+PS C:\Users\amita> wsl --install
+Ubuntu is already installed.
+Launching Ubuntu...
+suchip@DESKTOP-3AQMBDE:~$ dig -v
+DiG 9.18.28-0ubuntu0.22.04.1-Ubuntu
+suchip@DESKTOP-3AQMBDE:~$ python3 --version
+Python 3.10.12
+suchip@DESKTOP-3AQMBDE:~$ curl -G https://icanhazdadjoke.com/search --data-urlencode "term=pirate" -H "Accept: application/json"
+{"current_page":1,"limit":20,"next_page":1,"previous_page":1,"results":[{"id":"SvzIBAQS0Dd","joke":"What did the pirate say on his 80th birthday? Aye Matey!"},{"id":"QuscibaMClb","joke":"What does a pirate pay for his corn? A buccaneer!"},{"id":"2gii3LeN7Ed","joke":"Why couldn't the kid see the pirate movie? Because it was rated arrr!"},{"id":"SnOf2gqjiqc","joke":"Why are pirates called pirates? Because they arrr!"},{"id":"exXSCtkOKe","joke":"Why do pirates not know the alphabet? They always get stuck at \"C\"."}],"search_term":"pirate","status":200,"total_jokes":5,"total_pages":1}
+suchip@DESKTOP-3AQMBDE:~$ dig +short icanhazdadjoke.com
+104.21.66.15
+172.67.198.173
+suchip@DESKTOP-3AQMBDE:~$ mkdir my-webpage
+cd my-webpage
+echo "<!DOCTYPE html><html lang='en'><head><meta charset='UTF-8'><meta name='viewport' content='width=device-width, initial-scale=1.0'><title>My Simple Web Page</title></head><body><h1>Welcome to My Simple Web Page!</h1><p>Enjoy some dad jokes!</p></body></html>" > index.html
+python3 -m http.server 8000
+-bash: !DOCTYPE: event not found
+Serving HTTP on 0.0.0.0 port 8000 (http://0.0.0.0:8000/) ...
