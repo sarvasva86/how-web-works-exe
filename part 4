@@ -1,0 +1,33 @@
+Creating a URL Object:
+
+const url = new URL('https://example.com:8080/path/name?query=string#hash');
+console.log(url.href);      // Outputs: https://example.com:8080/path/name?query=string#hash
+console.log(url.protocol);   // Outputs: https:
+console.log(url.hostname);   // Outputs: example.com
+console.log(url.port);       // Outputs: 8080
+console.log(url.pathname);    // Outputs: /path/name
+console.log(url.search);     // Outputs: ?query=string
+console.log(url.hash);       // Outputs: #hash
+
+
+Manipulating URL Parameters:
+
+const url = new URL('https://example.com/path?param1=value1&param2=value2');
+const params = url.searchParams;
+
+// Get a parameter value
+console.log(params.get('param1'));  // Outputs: value1
+
+// Set a new parameter
+params.set('param3', 'value3');
+console.log(url.search);            // Outputs: ?param1=value1&param2=value2&param3=value3
+
+// Delete a parameter
+params.delete('param2');
+console.log(url.search);            // Outputs: ?param1=value1&param3=value3
+
+
+Checking for Existence of Parameters:
+
+console.log(params.has('param1'));  // Outputs: true
+console.log(params.has('param2'));  // Outputs: false
